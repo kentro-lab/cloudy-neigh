@@ -1,0 +1,17 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# bazel run //:gazelle -- update-repos -from_file=go.mod -to_macro DEPS.bzl%go_deps  -build_file_proto_mode=disable
+# We may need to add gazelle:proto disable_global and "-build_file_proto_mode=disable" in the future.
+# gazelle:prefix github.com/kentro-lab/cloudy-neigh
+# gazelle:resolve go github.com/bazelbuild/buildtools/build @com_github_bazelbuild_buildtools//build:go_default_library
+gazelle(name = "gazelle")
+
+gazelle(
+    name = "gazelle-update-repos",
+    args = [
+        "-from_file=go.mod",
+        "-to_macro=DEPS.bzl%go_deps",
+        "-prune",
+    ],
+    command = "update-repos",
+)
