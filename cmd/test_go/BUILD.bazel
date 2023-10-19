@@ -1,0 +1,20 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "test_go_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/kentro-lab/cloudy-neigh/cmd/test_go",
+    visibility = ["//visibility:private"],
+    deps = [
+        "//proto/apipb",
+        "@com_github_cockroachdb_errors//errorspb",
+        "@com_github_cockroachdb_pebble//:pebble",
+        "@com_github_cockroachdb_pebble//vfs",
+    ],
+)
+
+go_binary(
+    name = "test_go",
+    embed = [":test_go_lib"],
+    visibility = ["//visibility:public"],
+)

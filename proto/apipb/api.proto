@@ -1,0 +1,12 @@
+syntax = "proto3";
+package proto.apipb;
+option go_package = "apipb";
+
+import "google/protobuf/any.proto";
+
+
+message TestMessage {
+  string field1 = 1;
+  repeated string field2 = 3;
+  google.protobuf.Any field3 = 4;
+}
