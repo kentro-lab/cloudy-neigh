@@ -6,6 +6,7 @@ go_library(
     importpath = "github.com/kentro-lab/cloudy-neigh/cmd/test_go",
     visibility = ["//visibility:private"],
     deps = [
+        "//proto/apipb:apipb_go_proto",
         "@com_github_cockroachdb_errors//errorspb",
         "@com_github_cockroachdb_pebble//:pebble",
         "@com_github_cockroachdb_pebble//vfs",
