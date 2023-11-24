@@ -1,6 +1,6 @@
 syntax = "proto3";
 package proto.apipb;
-option go_package = "apipb";
+option go_package = "github.com/kentro-lab/cloudy-neigh/proto/apipb";
 
 import "google/protobuf/any.proto";
 

@@ -4,6 +4,9 @@ load("@bazel_gazelle//:def.bzl", "gazelle")
 # We may need to add gazelle:proto disable_global and "-build_file_proto_mode=disable" in the future.
 # gazelle:prefix github.com/kentro-lab/cloudy-neigh
 # gazelle:resolve go github.com/bazelbuild/buildtools/build @com_github_bazelbuild_buildtools//build:go_default_library
+# gazelle:go_grpc_compilers gofast
+# gazelle:proto disable_global
+# How proto works --> https://github.com/bazelbuild/rules_go/blob/master/proto/core.rst#avoiding-conflicts
 gazelle(name = "gazelle")
 
 gazelle(
