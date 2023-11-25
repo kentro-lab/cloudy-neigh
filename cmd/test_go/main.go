@@ -7,7 +7,7 @@ import (
 	_ "github.com/cockroachdb/errors/errorspb"
 	"github.com/cockroachdb/pebble"
 	"github.com/cockroachdb/pebble/vfs"
-	"github.com/kentro-lab/cloudy-neigh/proto/apipb"
+	"github.com/kentro-lab/cloudy-neigh/proto/api"
 )
 
 func main() {
@@ -30,7 +30,6 @@ func main() {
 	if err := db.Close(); err != nil {
 		log.Fatal(err)
 	}
-	msg := apipb.TestMessage{}
-	fmt.Println("Message: ", msg)
-
+	msg := api.Vector{Values: []float32{1, 2, 3}}
+	fmt.Println("mag: ", msg.String())
 }

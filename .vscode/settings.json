@@ -14,7 +14,7 @@
         "-bazel-mypkg",
       ],
       "formatting.gofumpt": true,
-      "formatting.local": "github.com/my/mypkg",
+      "formatting.local": "github.com/kentro-lab/cloudy-neigh",
       "ui.completion.usePlaceholders": true,
       "ui.semanticTokens": true,
       "ui.codelenses": {
