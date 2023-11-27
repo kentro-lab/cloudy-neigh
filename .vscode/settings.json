@@ -13,7 +13,6 @@
         "-bazel-testlogs",
         "-bazel-mypkg",
       ],
-      "formatting.gofumpt": true,
       "formatting.local": "github.com/kentro-lab/cloudy-neigh",
       "ui.completion.usePlaceholders": true,
       "ui.semanticTokens": true,
@@ -28,7 +27,7 @@
       },
     },
     "go.useLanguageServer": true,
-    "go.buildOnSave": "off",
+    "go.formatTool": "gofmt",
     "go.lintOnSave": "off",
     "go.vetOnSave": "off",
   }

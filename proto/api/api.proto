@@ -2,11 +2,6 @@ syntax = "proto3";
 package proto.api;
 option go_package = "github.com/kentro-lab/cloudy-neigh/proto/api";
 
-
-message Vector {
-  repeated float values = 1;
-}
-
 // Index API
 message IndexRequest {
 }
